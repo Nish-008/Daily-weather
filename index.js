@@ -39,11 +39,57 @@ async function getWeatherData(city) {
 }
 
 function displayWeatherInfo(data) {
+    const {
+        location: {
+            name: city,
+            region,
+            country
+        },
+        current: {
+            temp_f,
+            temp_c,
+            humidity, 
+            condition: {
+                text: conditionText,
+                icon: conditionIcon
+            }
+        }
+    } = data;
 
+    card.textContent = "";
+    card.style.display = "flex";
+
+    const cityDisplay = document.createElement("h1");
+    const tempDisplay = document.createElement("p");
+    const humidityDisplay = document.createElement("p");
+    const descDisplay = document.createElement("p");
+    const weatherEmoji = document.createElement("img");
+
+
+    cityDisplay.textContent = city;
+    tempDisplay.textContent = `${temp_c}°C`;
+    humidityDisplay.textContent = `Humidity: ${humidity}%`;
+    descDisplay.textContent = conditionText;
+
+    weatherEmoji.src = `https:${conditionIcon}`; 
+    weatherEmoji.alt = "Weather icon"; 
+
+
+    cityDisplay.classList.add("cityDisplay");
+    tempDisplay.classList.add("tempDisplay");
+    humidityDisplay.classList.add('humidityDisplay');
+    descDisplay.classList.add('descDisplay');
+    weatherEmoji.classList.add('weatherEmoji');
+
+    card.appendChild(cityDisplay);
+    card.appendChild(tempDisplay);
+    card.appendChild(humidityDisplay);
+    card.appendChild(descDisplay);
+    card.appendChild(weatherEmoji);
 }
 
 function getWeatherEmoji(weatherId){
-
+    
 }
 
 function displayError(message){
