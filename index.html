@@ -4,27 +4,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Daily Weather</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-    <script>
-        function api() {
-            fetch("http://api.weatherapi.com/v1/current.json?key=05c035548cd44f96aa572326241409&q=Bangladesh")
-                .then(res => res.json())
-                .then(data => console.log(data))
-            // temp f -> data.current.temp_f
-            // temp c -> data.current.temp_c
-            // city -> data.location.name
-            // region -> data.location.region
-            // Country -> data.location.country
-            // current weather condition -> data.current.condition.text
-            // current weather condition icon -> data.current.condition.icon
+   <form action="weatherForm">
+    <input type="text" class="cityInput" placeholder="Enter city name">
+    <button type="submit"> Look up weather </button>
+   </form>
 
-
-        }
-        api();
-    </script>
+   <div class="card">
+    <h1 class="cityDisplay"> Dhaka </h1>
+    <p class="tempDisplay"> 22° C </p>
+    <p class="humidityDisplay"> Humidity: 75%</p>
+    <p class="descDisplay"> Moderate Rain </p>
+    <p class="weatherEmoji"> 🌧 </p>
+    <p class="forecast"> See forecast of upcoming days</p>
+    <p class="errorDisplay"> Please enter a city</p>
+   </div>
 </body>
 
 </html>

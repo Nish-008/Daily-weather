@@ -1,0 +1,171 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(135deg, #c9d6ff, #e2e2e2); 
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #333;
+}
+
+
+form {
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+    width: 350px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+    animation: fadeIn 1s ease forwards;
+}
+
+
+input[type="text"] {
+    width: 100%;
+    padding: 12px;
+    border: 2px solid #94a3b8; 
+    border-radius: 8px;
+    font-size: 1rem;
+    color: #333;
+    margin-bottom: 15px;
+    transition: border 0.3s ease;
+}
+
+input[type="text"]:focus {
+    border-color: #a78bfa; 
+    outline: none;
+}
+
+
+button {
+    width: 100%;
+    padding: 12px;
+    background-color: #a78bfa;
+    border: none;
+    border-radius: 8px;
+    color: white;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+    background-color: #7c3aed; 
+    transform: scale(1.05);
+}
+
+
+.card {
+    background: white;
+    width: 350px;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+}
+
+
+.card::before {
+    content: '';
+    position: absolute;
+    width: 150%;
+    height: 150%;
+    top: -50%;
+    left: -50%;
+    background: linear-gradient(135deg, rgba(167, 139, 250, 0.2), rgba(148, 163, 184, 0.2));
+    transform: rotate(45deg);
+    z-index: -1;
+}
+
+
+.cityDisplay {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.tempDisplay {
+    font-size: 3.5rem;
+    font-weight: bold;
+    color: #7c3aed; 
+    margin-bottom: 15px;
+}
+
+.humidityDisplay {
+    font-size: 1.2rem;
+    color: #94a3b8; 
+    margin-bottom: 10px;
+}
+
+.descDisplay {
+    font-size: 1.1rem;
+    font-style: italic;
+    color: #555;
+    margin-bottom: 15px;
+}
+
+.weatherEmoji {
+    font-size: 4rem;
+    margin-bottom: 20px;
+    animation: bounce 1s infinite alternate;
+}
+
+
+@keyframes bounce {
+    0% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(-10px);
+    }
+}
+
+.forecast {
+    color: #555;
+    font-size: 0.9rem;
+    text-decoration: underline;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.forecast:hover {
+    color: #a78bfa; 
+}
+
+
+.errorDisplay {
+    color: #f87171; 
+    font-size: 0.9rem;
+    display: none; 
+}
+
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
