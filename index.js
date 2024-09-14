@@ -25,7 +25,7 @@ displayWeatherInfo(weatherData);
 });
 
 async function getWeatherData(city) {
-    const apiUrl = `http://api.weatherapi.com/v1/current.json?key=05c035548cd44f96aa572326241409&q=${city}`;
+    const apiUrl = `https://api.weatherapi.com/v1/current.json?key=05c035548cd44f96aa572326241409&q=${city}`;
     
     const response = await fetch(apiUrl);
 
