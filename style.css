@@ -155,7 +155,7 @@ button:hover {
 .errorDisplay {
     color: #f87171; 
     font-size: 0.9rem;
-    display: none; 
+    display: block; 
 }
 
 
