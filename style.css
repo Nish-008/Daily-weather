@@ -1,4 +1,3 @@
-
 * {
     margin: 0;
     padding: 0;
@@ -7,16 +6,36 @@
 
 body {
     font-family: 'Arial', sans-serif;
-    background: linear-gradient(135deg, #c9d6ff, #e2e2e2); 
+    background: linear-gradient(135deg, #c9d6ff, #e2e2e2);
     min-height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     color: #333;
+    padding: 20px; /* Added padding for better spacing */
+}
+
+/* Navigation Bar / Header */
+header {
+    text-align: center;
+    margin-bottom: 30px;
+    animation: fadeIn 1s ease forwards;
+}
+
+header h1 {
+    font-size: 3rem;
+    color: #7c3aed; /* Matches button hover color */
+}
+
+header p {
+    font-size: 1.2rem;
+    color: #7b66e5; /* Darker shade of purple for better visibility */
+    margin-top: 10px;
 }
 
 
+/* Form Styles */
 form {
     background: white;
     padding: 20px;
@@ -30,11 +49,10 @@ form {
     animation: fadeIn 1s ease forwards;
 }
 
-
 input[type="text"] {
     width: 100%;
     padding: 12px;
-    border: 2px solid #94a3b8; 
+    border: 2px solid #94a3b8;
     border-radius: 8px;
     font-size: 1rem;
     color: #333;
@@ -43,10 +61,9 @@ input[type="text"] {
 }
 
 input[type="text"]:focus {
-    border-color: #a78bfa; 
+    border-color: #a78bfa;
     outline: none;
 }
-
 
 button {
     width: 100%;
@@ -61,11 +78,11 @@ button {
 }
 
 button:hover {
-    background-color: #7c3aed; 
+    background-color: #7c3aed;
     transform: scale(1.05);
 }
 
-
+/* Weather Card */
 .card {
     background: white;
     width: 350px;
@@ -77,21 +94,19 @@ button:hover {
     position: relative;
     overflow: hidden;
     display: flex;
-    flex-direction: column; 
+    flex-direction: column;
     align-items: center;
-    display: none; 
+    display: none;
 }
 
 .card > * {
-    margin-bottom: 10px; /* Add spacing between child elements */
+    margin-bottom: 10px;
 }
-
 
 .card:hover {
     transform: translateY(-10px);
     box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
 }
-
 
 .card::before {
     content: '';
@@ -105,7 +120,7 @@ button:hover {
     z-index: -1;
 }
 
-
+/* Weather Info */
 .cityDisplay {
     font-size: 2rem;
     color: #333;
@@ -115,13 +130,13 @@ button:hover {
 .tempDisplay {
     font-size: 3.5rem;
     font-weight: bold;
-    color: #7c3aed; 
+    color: #7c3aed;
     margin-bottom: 15px;
 }
 
 .humidityDisplay {
     font-size: 1.2rem;
-    color: #94a3b8; 
+    color: #94a3b8;
     margin-bottom: 10px;
 }
 
@@ -138,7 +153,13 @@ button:hover {
     animation: bounce 1s infinite alternate;
 }
 
+.errorDisplay {
+    color: #f87171;
+    font-size: 0.9rem;
+    display: block;
+}
 
+/* Animations */
 @keyframes bounce {
     0% {
         transform: translateY(0);
@@ -147,13 +168,6 @@ button:hover {
         transform: translateY(-10px);
     }
 }
-
-.errorDisplay {
-    color: #f87171; 
-    font-size: 0.9rem;
-    display: block; 
-}
-
 
 @keyframes fadeIn {
     0% {
@@ -164,4 +178,32 @@ button:hover {
         opacity: 1;
         transform: translateY(0);
     }
+}
+
+/* Footer Styling */
+footer {
+    margin-top: 50px;
+    text-align: center;
+    font-size: 0.9rem;
+    color: #64748b;
+    padding: 20px 0;
+    position: relative;
+    opacity: 0; /* Start hidden */
+    animation: fadeIn 1.5s ease forwards; /* Fade-in animation */
+}
+
+footer p {
+    margin: 0;
+    font-weight: 400;
+}
+
+footer a {
+    color: #4f46e5; /* Deep purple for the link */
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+footer a:hover {
+    color: #6366f1; /* Lighter purple on hover */
 }
