@@ -13,10 +13,10 @@ body {
     justify-content: center;
     align-items: center;
     color: #333;
-    padding: 20px; /* Added padding for better spacing */
+    padding: 20px; 
 }
 
-/* Navigation Bar / Header */
+/*  Header */
 header {
     text-align: center;
     margin-bottom: 30px;
@@ -25,12 +25,12 @@ header {
 
 header h1 {
     font-size: 3rem;
-    color: #7c3aed; /* Matches button hover color */
+    color: #7c3aed; 
 }
 
 header p {
     font-size: 1.2rem;
-    color: #7b66e5; /* Darker shade of purple for better visibility */
+    color: #7b66e5; 
     margin-top: 10px;
 }
 
@@ -188,8 +188,8 @@ footer {
     color: #64748b;
     padding: 20px 0;
     position: relative;
-    opacity: 0; /* Start hidden */
-    animation: fadeIn 1.5s ease forwards; /* Fade-in animation */
+    opacity: 0; 
+    animation: fadeIn 1.5s ease forwards; 
 }
 
 footer p {
@@ -198,12 +198,12 @@ footer p {
 }
 
 footer a {
-    color: #4f46e5; /* Deep purple for the link */
+    color: #4f46e5; 
     text-decoration: none;
     font-weight: bold;
     transition: color 0.3s ease;
 }
 
 footer a:hover {
-    color: #6366f1; /* Lighter purple on hover */
+    color: #6366f1; 
 }
